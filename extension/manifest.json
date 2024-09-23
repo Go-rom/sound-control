@@ -11,6 +11,16 @@
       "48": "images/Boombox_48.png",
       "96": "images/Boombox_96.png"
     },
+    "theme_icons": [{
+      "light": "images/Boombox_48.png",
+      "dark": "images/Boombox_48-dark.png",
+      "size": 48
+    }
+    {
+      "light": "images/Boombox_96.png",
+      "dark": "images/Boombox_96-dark.png",
+      "size": 96
+    }],    
     "default_title": "Sound Control",
     "default_popup": "popup.html"
   },

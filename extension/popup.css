@@ -1,105 +1,219 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 600px;
+@media (prefers-color-scheme: light) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 600px;
+  }
+
+  button {
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+  .no-sounds {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .Tab {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .Tab a {
+    flex: 2 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 5px;
+  }
+
+  .Tab a span {
+    font-size: 12px;
+    color: #777;
+  }
+
+  .Tab.selected {
+    background-color: #d8efff;
+  }
+
+  .Tab > .no-sound {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    border: 1px solid black;
+  }
+
+  .Tab button {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 22px 22px;
+  }
+
+  .Tab button:hover {
+    background-color: none;
+    border: 1px solid black;
+  }
+
+  .Tab button.muted {
+    background-image: url(images/ios7-volume-low.png);
+  }
+
+  .Tab button.unmuted {
+    background-image: url(images/ios7-volume-high.png);
+  }
+
+  ul.Popup {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.Popup li {
+    font-size: 14px;
+    border-top: 1px solid;
+    margin: 0;
+    list-style: none;
+  }
+
+  ul.Popup li:first-child {
+    border-top: none;
+  }
+
+  .Popup .global-control {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .Popup .global-control button {
+    padding: 5px;
+    border: 1px solid black;
+  }
 }
 
-button {
-  background: none;
-  border: none;
-  outline: none;
-}
+@media (prefers-color-scheme: dark) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 600px;
+    color: #fbfbfe;
+    background-color: #42414d;
+    border-color: #fbfbfe;
+  }
 
-.no-sounds {
-  padding: 10px;
-  text-align: center;
-}
+  button {
+    background: none;
+    border: none;
+    outline: none;
+  }
 
-.Tab {
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
+  .no-sounds {
+    padding: 10px;
+    text-align: center;
+  }
 
-.Tab a {
-  flex: 2 0 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-right: 5px;
-}
+  .Tab {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 
-.Tab a span {
-  font-size: 12px;
-  color: #777;
-}
+  .Tab a {
+    flex: 2 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 5px;
+  }
 
-.Tab.selected {
-  background-color: #d8efff;
-}
+  .Tab a span {
+    font-size: 12px;
+    color: #cfcfd8;
+  }
 
-.Tab > .no-sound {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 5px;
-  border: 1px solid black;
-}
+  .Tab.selected {
+    background-color: #0090ed;
+  }
 
-.Tab button {
-  width: 30px;
-  height: 30px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 22px 22px;
-}
+  .Tab > .no-sound {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    border: 1px solid #fbfbfe;
+  }
 
-.Tab button:hover {
-  background-color: none;
-  border: 1px solid black;
-}
+  .Tab button {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 22px 22px;
+  }
 
-.Tab button.muted {
-  background-image: url(images/ios7-volume-low.png);
-}
+  .Tab button:hover {
+    background-color: none;
+    border: 1px solid #fbfbfe;
+  }
 
-.Tab button.unmuted {
-  background-image: url(images/ios7-volume-high.png);
-}
+  .Tab button.muted {
+    background-image: url(images/ios7-volume-low.png);
+  }
 
-ul.Popup {
-  margin: 0;
-  padding: 0;
-}
+  .Tab button.unmuted {
+    background-image: url(images/ios7-volume-high.png);
+  }
 
-ul.Popup li {
-  font-size: 14px;
-  border-top: 1px solid;
-  margin: 0;
-  list-style: none;
-}
+  ul.Popup {
+    margin: 0;
+    padding: 0;
+  }
 
-ul.Popup li:first-child {
-  border-top: none;
-}
+  ul.Popup li {
+    font-size: 14px;
+    border-top: 1px solid;
+    margin: 0;
+    list-style: none;
+  }
 
-.Popup .global-control {
-  text-align: center;
-  padding: 10px;
-}
+  ul.Popup li:first-child {
+    border-top: none;
+  }
 
-.Popup .global-control button {
-  padding: 5px;
-  border: 1px solid black;
+  .Popup .global-control {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .Popup .global-control button {
+    padding: 5px;
+    border: 1px solid #fbfbfe;
+    color:#fbfbfe;
+  }
 }
